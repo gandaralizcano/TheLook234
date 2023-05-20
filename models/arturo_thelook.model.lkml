@@ -104,7 +104,7 @@ explore: inventory_items {
 
 explore: orders {
   always_filter: {
-    filters: [orders.user_id: "1729", users.city: "New York", users.age: "=77"]
+    filters: [users.city: "New York"]
     }
   join: users {
     type: left_outer
