@@ -103,7 +103,7 @@ explore: inventory_items {
 }
 
 explore: orders {
- sql_always_where: ${created_date} <= '2019-10-01' ;;
+ sql_always_where: ${created_date} >= '2019-10-01' ;;
   join: users {
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
