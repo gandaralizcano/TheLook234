@@ -42,6 +42,10 @@ view: users {
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
+    link:{
+      label:"supporting_help"
+      url:"nayat@google.com"
+      }
   }
 
   dimension: first_name {
