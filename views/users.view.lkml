@@ -73,13 +73,6 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
-  dimension:looker_link{
-    link:{
-      label:"adding_links"
-      url:"https://cloud.google.com/looker/docs/reference/param-field-link#:~:text=as%20the%20field.-,Link%20behavior,same%20browser%20tab%20or%20iframe."
-    }
-  }
-
   measure: count {
     type: count
     drill_fields: [detail*]
