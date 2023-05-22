@@ -51,9 +51,9 @@ view: inventory_items {
     type: sum
     sql: ${TABLE}.cost ;;
     html:
-    {% if value > 50 %}
+    {% if value <= 50 %}
      <font style="color: green; font-size: 80%">{{ rendered_value }}</font>
-    {% elsif value >100 %}
+    {% elsif value <= 100 %}
      <font style="color: blue; font-size:90%">{{ rendered_value }}</font>
     {% else %}
      <font style="color: brown; font-size:100%">{{ rendered_value }}</font>
