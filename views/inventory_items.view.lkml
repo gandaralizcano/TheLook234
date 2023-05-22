@@ -6,7 +6,6 @@ view: inventory_items {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
-    html:   <font color="green">{{ value }}</font>;;
   }
 
   dimension: cost {
