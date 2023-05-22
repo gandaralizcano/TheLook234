@@ -48,6 +48,7 @@ view: inventory_items {
   }
   measure: total {
     type: sum
+    sql: ${TABLE}.cost ;;
     }
   measure: count {
     type: count
