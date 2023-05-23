@@ -103,6 +103,9 @@ explore: inventory_items {
 }
 
 explore: orders {
+  always_filter: {
+    filters: [orders.user_id: "1729"]
+    }
   join: users {
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
@@ -111,6 +114,7 @@ explore: orders {
 }
 
 explore: order_items {
+
   sql_always_where: ${orders.created_month} >= '2019-11' ;;
   join: orders {
     type: left_outer

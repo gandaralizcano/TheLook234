@@ -21,7 +21,8 @@ view: users {
   dimension: country {
     type: string
     map_layer_name: countries
-    sql: ${TABLE}.country ;;
+    sql: ${TABLE}.country
+    drill_feilds:[state,city]
   }
 
   dimension_group: created {
@@ -41,6 +42,10 @@ view: users {
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
+    link:{
+      label:"supporting_help"
+      url:"nayat@google.com"
+      }
   }
 
   dimension: first_name {
