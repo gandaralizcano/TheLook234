@@ -9,13 +9,19 @@ view: products {
   }
 
   dimension: brand {
-    type: string
+    type:  string
     sql: ${TABLE}.brand ;;
   }
 
   dimension: category {
     type: string
-    sql: ${TABLE}.category ;;
+    sql: ${TABLE}.category
+    link :{
+      label: "dresses"
+      url : "https://www.google.com/search?q=dresses&rlz=1CAZVTZ_enIN1056&sxsrf=APwXEdenx6NvcfJPu76QCmHay5o7ZAUrDg%3A1685602717696&ei=nUF4ZLyKKvyK2roPlO-u-A4&ved=0ahUKEwj8zOG5v6H_AhV8hVYBHZS3C-8Q4dUDCA8&uact=5&oq=dresses&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzILCAAQgAQQsQMQgwEyCAgAEIAEELEDMgUIABCABDIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBDJAzIICAAQgAQQkgMyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6DwgAEIoFEOoCELQCEEMYAToPCC4QigUQ6gIQtAIQQxgBOhUILhADEI8BEOoCELQCEIwDEOUCGAI6BwgjEIoFECc6FAguEIoFEJECEIsDEKgDEPADEJgDOggIABCKBRCRAjoNCAAQigUQsQMQgwEQCjoLCAAQigUQsQMQgwE6EQguEIAEELEDEMcBENEDENQCOgsILhCKBRCxAxCDAToHCAAQigUQQzoNCAAQgAQQFBCHAhCxAzoFCC4QgAQ6CgguEIoFENQCEEM6EQguEIAEELEDEIMBEMcBEK8BOgoIABCKBRCxAxBDOggIABCKBRCxAzoICAAQigUQkgM6EQguEIAEELEDEIMBEMcBENEDSgQIQRgAUIIGWJENYN0VaAFwAXgAgAGZAogBrwySAQUwLjEuNpgBAKABAbABFLgBAsABAdoBBggBEAEYAdoBBggCEAEYCw&sclient=gws-wiz-serp"
+    }
+
+    };;
   }
 
   dimension: department {
