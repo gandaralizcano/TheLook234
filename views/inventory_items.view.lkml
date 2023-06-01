@@ -46,7 +46,18 @@ view: inventory_items {
     ]
     sql: ${TABLE}.sold_at ;;
   }
-
+  measure: total {
+    type: sum
+    sql: ${TABLE}.cost ;;
+    html:
+    {% if value <= 50 %}
+     <font style="color: green; font-size: 80%">{{ rendered_value }}</font>
+    {% elsif value <= 100 %}
+     <font style="color: blue; font-size:90%">{{ rendered_value }}</font>
+    {% else %}
+     <font style="color: brown; font-size:100%">{{ rendered_value }}</font>
+    {% endif %};;
+    }
   measure: count {
     type: count
     drill_fields: [id, products.id, products.item_name, order_items.count, order_items_vijaya.count]
